@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: #f8faf8;
+    color: #1a1a1a;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  #root {
+    width: 100%;
+    min-height: 100svh;
+  }
+}
+
+@layer components {
+  .score-bar-fill {
+    transition: width 0.6s ease;
+  }
+}
+
+@media print {
+  body { background: white; }
+  .no-print { display: none !important; }
+}
